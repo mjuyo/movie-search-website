@@ -10,7 +10,7 @@ import Details from "./components/Details";
 import Footer from "./components/Footer";
 
 const API_URL = "https://api.themoviedb.org/3";
-const API_KEY = "b5e9349738ba7d09126543a3c9d7d257";
+//const API_KEY = "b5e9349738ba7d09126543a3c9d7d257";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -23,7 +23,7 @@ function App() {
       ? `&query=${encodeURIComponent(searchValue)}`
       : "";
 
-    const api = `${API_URL}/${type}/movie?api_key=${API_KEY}${query}`;
+    const api = `${API_URL}/${type}/movie?api_key=${process.env.REACT_APP_API_KEY}${query}`;
 
     fetch(api)
       .then((response) => response.json())
