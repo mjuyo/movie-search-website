@@ -10,7 +10,6 @@ import Details from "./components/Details";
 import Footer from "./components/Footer";
 
 const API_URL = "https://api.themoviedb.org/3";
-//const API_KEY = "b5e9349738ba7d09126543a3c9d7d257";
 
 function App() {
   const [movies, setMovies] = useState([]);
